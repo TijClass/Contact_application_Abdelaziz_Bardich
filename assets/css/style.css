@@ -37,5 +37,60 @@ small, .text_small {font-size: 0.8rem;}
 
 /* Layouts */
 header{
-  
+  position: relative;
+  color: var(--bg-white);
+}
+header:before{
+  content:'';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50vh;
+  background-color: var(--bs-success);
+  z-index: -1;
+}
+header .b-header {
+  padding: 0;
+  margin: 0;
+}
+header .logo img {
+  max-width: 120px;
+  margin: auto;
+  display: block;
+  margin-left: 0px;
+}
+header .b-header h1{
+  margin: 0;
+}
+header .b-header .logout-btn {
+  padding: .7rem 2rem;
+  transform: scale(1.1);
+}
+i.fa.fa-times-circle.text-danger {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+.search{
+  position: relative;
+}
+.search label{
+  position: absolute;
+}
+.search input{
+  padding-left: 30px !important;
+}
+.search label {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: max-content;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+input {
+    box-shadow: rgb(0 0 0 / 5%) 0px 3px 6px;
+    border: 1px solid #e9e9e9 !important;
 }

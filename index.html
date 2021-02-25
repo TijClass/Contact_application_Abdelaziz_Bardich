@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="pt-4">
+    <header class="pt-4 mb-3">
         <div class="container">
-            <div class="row">
+            <div class="row d-flex align-items-center b-header rounded-pill bg-white">
                 <div class="col-12 col-md-2 text-md-left">
                     <div class="logo"><img src="./assets/img/logos/logo.png" alt="Website logo"></div>
                 </div>
                 <div class="col-12 col-md-10 p-0 text-center d-flex justify-content-between align-items-center">
                     <div class="text-left"><h1 class="h3">Welcome title</h1></div>
-                    <div class="text-right"><a href="./login.html" class="btn btn-primary shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
+                    <div class="text-right"><a href="./login.html" class="btn btn-primary rounded-pill py-3 shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
                 </div>
             </div>
         </div>
@@ -29,16 +29,16 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-12 p-5 shadow border bg-white rounded">
+                    <div class="col-12 p-5">
                             <div class="row m-0">
                                 <div class="col-12 col-md-6">
-                                    <h2 class="h4">Contact list:</h2>
+                                    <h2 class="text-light">Contact list:</h2>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="row justify-content-end align-items-center">
                                         <div class="col-6 search p-0">
-                                            <input class="w-100 shadow border rounded p-2" type="search" name="search" id="search" placeholder="search">
-                                            <!-- <label for="search"><i class="fa fa-search"></i></label> -->
+                                            <input class="w-100 border rounded p-2" type="search" name="search" id="search" placeholder="search">
+                                            <label for="search"><i class="fa fa-search"></i></label>
                                         </div>
                                         <div class="col-auto">
                                             <button class="btn shadow btn-primary p-2" data-bs-toggle="modal" data-bs-target="#add-person">Add person</button>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <table class="table table-striped">
+                                <table class="table table-striped shadow border rounded bg-white rounded mt-3">
                                     <thead>
                                         <th scope="col">ID</th>
                                         <th scope="col">Firstname</th>

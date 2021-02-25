@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
+    <header class="pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 text-md-left">
@@ -40,7 +40,7 @@
                             <div class="col-12 col-md-6">
                                 <h2><u>Login:</u></h2>
                                 <div class="bg-light border rounded p-5">
-                                    <form action="" method="post">
+                                    <form action="./" method="post">
                                         <div class="form-group mb-2">
                                             <label for="email">Email:</label>
                                             <input type="email" id="email" name="email" class="form-control" placeholder="Email adress..."/>

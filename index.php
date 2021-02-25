@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact list</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css">
     <!-- fontawesom -->
@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
+    <header class="pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-2 text-md-left">
                     <div class="logo"><img src="./assets/img/logos/logo.png" alt="Website logo"></div>
                 </div>
                 <div class="col-12 col-md-10 p-0 text-center d-flex justify-content-between align-items-center">
-                    <div class="text-left"><h1>Welcome title</h1></div>
-                    <div class="text-right"><a href="./logout.html" class="btn btn-primary shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
+                    <div class="text-left"><h1 class="h3">Welcome title</h1></div>
+                    <div class="text-right"><a href="./login.php" class="btn btn-primary shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                     <div class="col-12 p-5 shadow border bg-white rounded">
                             <div class="row m-0">
                                 <div class="col-12 col-md-6">
-                                    <h2>Contact list:</h2>
+                                    <h2 class="h4">Contact list:</h2>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="row justify-content-end align-items-center">
@@ -41,7 +41,7 @@
                                             <!-- <label for="search"><i class="fa fa-search"></i></label> -->
                                         </div>
                                         <div class="col-auto">
-                                            <button class="btn shadow btn-primary p-2">Add person</button>
+                                            <button class="btn shadow btn-primary p-2" data-bs-toggle="modal" data-bs-target="#add-person">Add person</button>
                                         </div>
                                     </div>
                                 </div>
@@ -177,6 +177,11 @@
             </div>
         </section>
     </main>
+
+
+
+    <!-- Add contact modal -->
+    <?php include "./add_person.php"; ?>
     <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>

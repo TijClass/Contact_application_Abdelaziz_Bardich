@@ -1,8 +1,8 @@
 <?php
 // require configs
-require_once "../config/config.php";
+require_once "./config/config.php";
 // require functions
-require_once "../helpers/functions.php";
+require_once "./helpers/functions.php";
 
 // Start settion
 session_start();

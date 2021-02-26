@@ -17,7 +17,6 @@ $(document).ready(function(){
             data:formData,
             success:function(res){
                 console.log(res);
-                
             },
             error:function(err){
                 console.error(err);

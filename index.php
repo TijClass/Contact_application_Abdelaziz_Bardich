@@ -1,3 +1,4 @@
+<?php include "./core/init.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,7 @@
                 </div>
                 <div class="col-12 col-md-10 p-0 text-center d-flex justify-content-between align-items-center">
                     <div class="text-left"><h1 class="h3">Welcome title</h1></div>
-                    <div class="text-right"><a href="./login.html" class="btn btn-primary rounded-pill py-3 shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
+                    <div class="text-right"><a href="./logout.php" class="btn btn-primary rounded-pill py-3 shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
                 </div>
             </div>
         </div>
@@ -200,7 +201,7 @@
                 <div class="row">
                     <div class="mb-3 col-6">
                         <label for="email-text" class="col-form-label">Email:</label>
-                        <input type="text" name="email" class="form-control" id="email-txt">
+                        <input type="email" name="email" class="form-control" id="email-txt">
                     </div>
                     <div class="mb-3 col-6">
                         <label for="adress-text" class="col-form-label">Adress:</label>

@@ -1,4 +1,18 @@
 <?php
+$con = "";
+// require configs
+require_once "./config/config.php";
+// connect to DB
+function connectToDB($DB_HOST,$DB_NAME,$DB_USER,$DB_PASSWORD){
+    try {
+        $GLOBALS['con'] = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USER, $DB_PASSWORD);
+        // set the PDO error mode to exception
+        return true;
+    } catch(PDOException $e) {
+        // echo "Connection failed: " . $e->getMessage();
+        return false;
+    }
+}
 // check login infos
 function checkLoginInfos($POST){
     // if email or password are empty
@@ -20,9 +34,8 @@ function checkLoginInfos($POST){
 // set login
 function setLoginRecord(bool $remember){
     if($remember){
-        // $userKey = password_hash("1234");
-        // $exp = new DateTime("1 week");
-        // $_SESSION["favcolor"] = "green";
+        $userKey = password_hash("1234");
+        $exp = new DateTime("1 week");
         $_SESSION['loggedin'] = "true";
         setcookie("loggedin", "true", $exp->getTimestamp(), "/"); // 86400 = 1 day
     }else{
@@ -45,4 +58,9 @@ function unsetSessionsCookies(){
     // destroy the session
     session_destroy();
     unset($_COOKIE['loggedin']);
+}
+
+// Add contact
+function addContact($fName,$lName,$email,$adress,$phone,$group,$note){
+    return true;
 }

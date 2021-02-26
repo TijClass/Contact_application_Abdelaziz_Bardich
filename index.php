@@ -1,4 +1,3 @@
-<?php include "./core/init.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -223,7 +222,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <label for="note-text" class="col-form-label">Note:</label>
-                        <textarea class="form-control" id="note-text"></textarea>
+                        <textarea class="form-control" id="note-text" name="note"></textarea>
                     </div>
                 </div>
                 <div class="row">

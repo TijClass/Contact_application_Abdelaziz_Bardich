@@ -1,10 +1,13 @@
 <?php
-// require configs
-require_once "../config/config.php";
-// require functions
-require_once "../helpers/functions.php";
-// Start settion
+// start session
 session_start();
+
+// incude configs
+require_once "../config/config.php";
+
+// inclide functions
+require_once "../helpers/functions.php";
+
 // check loggin infos and set sessions
 if(isset($_POST['submit'])){
     $login = checkLoginInfos($_POST);

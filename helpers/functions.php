@@ -1,7 +1,5 @@
 <?php
 $con = "";
-// require configs
-require_once "./config/config.php";
 // connect to DB
 function connectToDB($DB_HOST,$DB_NAME,$DB_USER,$DB_PASSWORD){
     try {
@@ -53,14 +51,21 @@ function checkLoginState(){
 }
 // unset sessions & Cookies
 function unsetSessionsCookies(){
+    session_start();
     // remove all session variables
     session_unset();
     // destroy the session
     session_destroy();
+    unset($_SESSION['loggedin']);
     unset($_COOKIE['loggedin']);
+    return true;
 }
 
 // Add contact
 function addContact($fName,$lName,$email,$adress,$phone,$group,$note){
+    require_once "../config/config.php";
+    $sql = "INSERT INTO "
     return true;
 }
+
+function connect()

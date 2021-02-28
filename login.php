@@ -1,3 +1,4 @@
+<?php //require_once "./core./init.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +41,7 @@
                             <div class="col-12 col-md-6">
                                 <h2><u>Login:</u></h2>
                                 <div class="bg-light border rounded p-5">
-                                    <form action="./components/login.php" method="post">
+                                    <form action="./controllers/login.php" method="post">
                                         <div class="form-group mb-2">
                                             <label for="email">Email:</label>
                                             <input type="email" id="email" name="email" class="form-control" placeholder="Email adress..."/>

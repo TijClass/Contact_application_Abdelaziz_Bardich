@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     // Table filter
     $("#search").keyup(function() {
         let keyword = $(this).val().toLowerCase();
@@ -13,7 +12,7 @@ $(document).ready(function(){
         e.preventDefault();
         let formData = $(this).serialize();
         $.post({
-            url:'./components/add-contact.php',
+            url:'./controllers/add-contact.php',
             data:formData,
             success:function(res){
                 console.log(res);

@@ -1,4 +1,16 @@
-<?php include_once "./core/header.php"; ?>
+<?php 
+include_once "./core/header.php";
+include_once "./core/controllers/db.php";
+
+try {
+    $sql = $con->prepare("SELECT * FROM contacts order by id DESC");
+    if($sql->execute()){
+        $data = $sql->fetchAll();
+    }
+}catch(PDOException $e) {
+    echo "<br>" . $e->getMessage();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,116 +72,21 @@
                                         <th scope="col">Actions</th>
                                     </thead>
                                     <tbody>
+                                    <?php 
+                                    foreach($data as $row){
+                                        echo '
                                         <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
+                                            <td>'.$row['id'].'</td>
+                                            <td>'.$row['first_name'].'</td>
+                                            <td>'.$row['last_name'].'</td>
+                                            <td>'.$row['email'].'</td>
+                                            <td>'.$row['address1'].'</td>
+                                            <td>'.$row['phone'].'</td>
+                                            <td>'.$row['group'].'</td>
+                                            <td><a data-id="'.$row['id'].'" href="#">Edit</a> <a href="./core/controllers/delete-contact.php?id='.$row['id'].'"><i class="fa fa-times-circle text-danger"></i></a></td>
                                         </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>58011</td>
-                                            <td>Abby</td>
-                                            <td>Adams</td>
-                                            <td>abby@anywhere.com</td>
-                                            <td>Adress1</td>
-                                            <td>Phone1</td>
-                                            <td>Family</td>
-                                            <td><a href="#">Edit</a> <a href="#"><i class="fa fa-times-circle text-danger"></i></a></td>
-                                        </tr>
+                                        ';
+                                    }?>
                                     </tbody>
                                 </table>
                             </div>

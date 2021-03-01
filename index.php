@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-12 col-md-10 p-0 text-center d-flex justify-content-between align-items-center">
                     <div class="text-left"><h1 class="h3">Welcome title</h1></div>
-                    <div class="text-right"><a href="./logout.php" class="btn btn-primary rounded-pill py-3 shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
+                    <div class="text-right"><a href="./core/controllers/logout.php" class="btn btn-primary rounded-pill py-3 shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
                 </div>
             </div>
         </div>
@@ -188,6 +188,7 @@
             </div>
             <div class="modal-body">
               <form method="POST" action="./controllers/add-contact.php">
+              <input type="hidden" name="id" value="">
                 <div class="row">
                     <div class="mb-3 col-6">
                         <label for="first-name" class="col-form-label">First name:</label>

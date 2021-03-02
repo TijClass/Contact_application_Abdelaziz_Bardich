@@ -41,6 +41,7 @@
                             <div class="col-12 col-md-6">
                                 <h2><u>Login:</u></h2>
                                 <div class="bg-light border rounded p-5">
+                                <?php if(isset($_GET['err'])){echo '<div class="alert alert-danger text-center p-0">'.$_GET['err'].'</div>';} ?>
                                     <form action="./core/controllers/login.php" method="post">
                                         <div class="form-group mb-2">
                                             <label for="email">Email:</label>

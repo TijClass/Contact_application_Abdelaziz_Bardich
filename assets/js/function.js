@@ -41,7 +41,7 @@ function showEditModal(id) {
                 $("#old-adress-text").val(data[0]['address1']);
                 $("#old-phone-txt").val(data[0]['phone']);
                 switch (data[0]['group']) {
-                    case "familty":
+                    case "family":
                         $("#old-family").prop("checked",true);
                         break;
                     case "friend":

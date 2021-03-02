@@ -35,6 +35,11 @@ $(document).ready(function(){
                         </a>
                     </td>
                 </tr>`);
+                // animate
+                $(`tr[data-id="${data['id']}"`).addClass('zoomOut');
+                setTimeout(() => {
+                    $(`tr[data-id="${data['id']}"`).removeClass('zoomOut');
+                }, 1000);
                 }
             },
             error:function(err){
@@ -71,8 +76,11 @@ $(document).ready(function(){
                             <i class="fa fa-times-circle text-danger"></i>
                         </a>
                     </td>`);
-                    $(`tr[data-id="${data['id']}"`).fadeOut();
-                    $(`tr[data-id="${data['id']}"`).fadeIn();
+                    // animate
+                    $(`tr[data-id="${data['id']}"`).addClass('flip');
+                    setTimeout(() => {
+                        $(`tr[data-id="${data['id']}"`).removeClass('flip');
+                    }, 1000);
                     
                 }
             },

@@ -75,7 +75,7 @@ try {
                                     <?php 
                                     foreach($data as $row){
                                         echo '
-                                        <tr>
+                                        <tr data-id="'.$row['id'].'"> 
                                             <td>'.$row['id'].'</td>
                                             <td>'.$row['first_name'].'</td>
                                             <td>'.$row['last_name'].'</td>
@@ -83,7 +83,7 @@ try {
                                             <td>'.$row['address1'].'</td>
                                             <td>'.$row['phone'].'</td>
                                             <td>'.$row['group'].'</td>
-                                            <td><a data-id="'.$row['id'].'" href="#">Edit</a> <a href="./core/controllers/delete-contact.php?id='.$row['id'].'"><i class="fa fa-times-circle text-danger"></i></a></td>
+                                            <td><a data-bs-toggle="modal" data-bs-target="#add-person" data-id="'.$row['id'].'" class="btn btn-link edit-contact">Edit</a> <a onclick="deleteContact('.$row['id'].')"><i class="fa fa-times-circle text-danger"></i></a></td>
                                         </tr>
                                         ';
                                     }?>
@@ -156,6 +156,7 @@ try {
       </div>
     <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/js/function.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -16,8 +16,9 @@ $(document).ready(function(){
             success:function(res){
                 if(res != 0){
                     $("#add-person").modal('toggle');
+                    clearForm();
                     let data = JSON.parse(res);
-                    $('table tbody').prepend(`<tr>
+                    $('table tbody').prepend(`<tr data-id="${data['id']}">
                     <td>${data['id']}</td>
                     <td>${data['fname']}</td>
                     <td>${data['lname']}</td>
@@ -25,7 +26,7 @@ $(document).ready(function(){
                     <td>${data['adress']}</td>
                     <td>${data['group']}</td>
                     <td>${data['note']}</td>
-                    <td><a data-id="${data['id']}" href="#">Edit</a> <a href="./core/controllers/delete-contact.php?id=${data['id']}"><i class="fa fa-times-circle text-danger"></i></a></td>
+                    <td><a data-id="${data['id']}" href="#">Edit</a> <a onclick="deleteContact(${data['id']})"><i class="fa fa-times-circle text-danger"></i></a></td>
                 </tr>`);
                 }
             },

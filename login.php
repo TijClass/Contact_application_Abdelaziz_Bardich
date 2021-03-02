@@ -44,11 +44,11 @@
                                     <form action="./core/controllers/login.php" method="post">
                                         <div class="form-group mb-2">
                                             <label for="email">Email:</label>
-                                            <input type="email" id="email" name="email" class="form-control" placeholder="Email adress..."/>
+                                            <input type="email" id="email" name="email" class="form-control" placeholder="Email adress..." value="abby@email.com"/>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="password">Password:</label>
-                                            <input type="password" id="password" name="password" class="form-control" placeholder="Password..."/>
+                                            <input type="password" id="password" name="password" class="form-control" placeholder="Password..." value="1234"/>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary" name="submit" value="submit">Login</button>

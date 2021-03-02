@@ -54,7 +54,7 @@ try {
                                             <label for="search"><i class="fa fa-search"></i></label>
                                         </div>
                                         <div class="col-auto">
-                                            <button class="btn shadow btn-primary p-2" data-bs-toggle="modal" data-bs-target="#add-person">Add person</button>
+                                            <button class="btn shadow btn-primary p-2 add-person" data-bs-toggle="modal" data-bs-target="#add-person">Add person</button>
                                         </div>
                                     </div>
                                 </div>
@@ -69,6 +69,7 @@ try {
                                         <th scope="col">Adress</th>
                                         <th scope="col">Phone</th>
                                         <th scope="col">Group</th>
+                                        <th scope="col">Notes</th>
                                         <th scope="col">Actions</th>
                                     </thead>
                                     <tbody>
@@ -83,7 +84,8 @@ try {
                                             <td>'.$row['address1'].'</td>
                                             <td>'.$row['phone'].'</td>
                                             <td>'.$row['group'].'</td>
-                                            <td><a data-bs-toggle="modal" data-bs-target="#add-person" data-id="'.$row['id'].'" class="btn btn-link edit-contact">Edit</a> <a onclick="deleteContact('.$row['id'].')"><i class="fa fa-times-circle text-danger"></i></a></td>
+                                            <td>'.$row['notes'].'</td>
+                                            <td><a data-bs-toggle="modal" data-bs-target="#edit-contact" onclick="prepareModalforEdit('.$row['id'].')" class="btn btn-link edit-contact">Edit</a> <a onclick="deleteContact('.$row['id'].')"><i class="fa fa-times-circle text-danger"></i></a></td>
                                         </tr>
                                         ';
                                     }?>
@@ -105,7 +107,6 @@ try {
             </div>
             <div class="modal-body">
               <form method="POST" action="./controllers/add-contact.php">
-              <input type="hidden" name="id" value="">
                 <div class="row">
                     <div class="mb-3 col-6">
                         <label for="first-name" class="col-form-label">First name:</label>

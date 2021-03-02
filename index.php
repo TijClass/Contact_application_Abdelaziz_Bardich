@@ -25,6 +25,9 @@ try {
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <div class="screen-loader">
+        <img src="./assets/img/loader-icon.gif.gif" alt="screen loader">
+    </div>
     <header class="pt-4 mb-3">
         <div class="container">
             <div class="row d-flex align-items-center b-header rounded-pill bg-white">

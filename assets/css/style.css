@@ -100,8 +100,24 @@ input {
 .zoomOut{
   animation: slideInLeft .5s;
 }
-
-
+/* Screen loader */
+.screen-loader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  opacity: .5;
+}
+.screen-loader img {
+  width: 50%;
+  height: min-content;
+}
  /* animations */
  @keyframes slideInLeft{
    from{

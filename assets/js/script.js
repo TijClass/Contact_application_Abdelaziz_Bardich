@@ -1,3 +1,11 @@
+// show loader for every ajax request
+$( document ).ajaxStart(function() {
+    $( ".screen-loader" ).fadeIn();
+    $( ".screen-loader" ).css("display","flex");
+});
+$( document ).ajaxComplete(function() {
+    $( ".screen-loader" ).fadeOut();
+});
 $(document).ready(function(){
     // Table filter
     $("#search").keyup(function() {

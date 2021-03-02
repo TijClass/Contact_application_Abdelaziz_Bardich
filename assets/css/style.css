@@ -135,3 +135,18 @@ input {
      transform: rotateX(0deg);
    }
  }
+
+
+
+ /* Fixing resoponsive errors */
+ @media screen and (max-width:768px){
+  h1.text-light {
+    font-size: 2rem;
+}
+.logout-btn {
+  width: 75vw;
+}
+h2.text-light {
+  text-align: center;
+}
+ }

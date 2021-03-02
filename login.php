@@ -29,18 +29,18 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-12 p-5 shadow bg-white border rounded">
-                        <div class="row m-0 p-5">
-                            <div class="col-12 col-md-6">
+                    <div class="col-12 p-md-5 shadow bg-white border rounded">
+                        <div class="row m-0 p-md-5">
+                            <div class="col-12 col-md-6 d-none d-md-block">
                                 <h2><u>Lorem ipsum:</u></h2>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi laboriosam officiis, voluptatem exercitationem eius! Accusantium deleniti ad ipsum itaque quidem vitae aspernatur eius dolore nesciunt voluptatibus. Labore, corrupti cupiditate!<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias deleniti reprehenderit accusantium aperiam neque iure exercitationem expedita error non, itaque impedit magni tempora corrupti praesentium, laudantium obcaecati earum maiores quisquam!</p>
                                 <div class="text-center">
                                     <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Read more...</a>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
                                 <h2><u>Login:</u></h2>
-                                <div class="bg-light border rounded p-5">
+                                <div class="bg-light border rounded px-3 py-5 p-md-5">
                                 <?php if(isset($_GET['err'])){echo '<div class="alert alert-danger text-center p-0">'.$_GET['err'].'</div>';} ?>
                                     <form action="./core/controllers/login.php" method="post">
                                         <div class="form-group mb-2">

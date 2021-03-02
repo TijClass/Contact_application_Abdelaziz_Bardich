@@ -30,13 +30,16 @@ try {
     </div>
     <header class="pt-4 mb-3">
         <div class="container">
-            <div class="row d-flex align-items-center b-header rounded-pill bg-white">
-                <div class="col-12 col-md-2 text-md-left">
-                    <div class="logo"><img src="./assets/img/logos/logo.png" alt="Website logo"></div>
+            <div class="row d-flex align-items-center b-header rounded-pill bg-white shadow">
+                <div class="col-12 col-md-2 text-center text-md-left">
+                    <div class="logo text-center text-md-left">
+                        <img src="./assets/img/logos/logo.png" alt="Website logo" class="d-none d-md-block">
+                        <img src="./assets/img/logos/logo.png" alt="Website logo" class="d-md-none mx-auto my-3">
+                    </div>
                 </div>
-                <div class="col-12 col-md-10 p-0 text-center d-flex justify-content-between align-items-center">
-                    <div class="text-left"><h1 class="h3">Welcome title</h1></div>
-                    <div class="text-right"><a href="./core/controllers/logout.php" class="btn btn-primary rounded-pill py-3 shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
+                <div class="col-12 col-md-10 p-0 text-center d-flex justify-content-between align-items-center flex-column flex-md-row">
+                    <div class="text-left d-none d-md-block mb-3 mb-md-0"><h1 class="h3">Welcome title</h1></div>
+                    <div class="text-right"><a href="./core/controllers/logout.php" class="btn btn-danger d-block rounded-pill py-md-3 shadow logout-btn"><i class="fa fa-row-left"></i> Logout</a></div>
                 </div>
             </div>
         </div>
@@ -45,7 +48,7 @@ try {
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-12 p-5">
+                    <div class="col-12 p-2 p-md-5">
                             <div class="row m-0">
                                 <div class="col-12 col-md-6">
                                     <h2 class="text-light">Contact list:</h2>
@@ -62,7 +65,7 @@ try {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 table-responsive">
                                 <table class="table table-striped shadow border rounded bg-white rounded mt-3">
                                     <thead>
                                         <th scope="col">ID</th>
@@ -80,7 +83,7 @@ try {
                                     foreach($data as $row){
                                         echo '
                                         <tr data-id="'.$row['id'].'"> 
-                                            <td>'.$row['id'].'</td>
+                                            <td scope="row">'.$row['id'].'</td>
                                             <td>'.$row['first_name'].'</td>
                                             <td>'.$row['last_name'].'</td>
                                             <td>'.$row['email'].'</td>

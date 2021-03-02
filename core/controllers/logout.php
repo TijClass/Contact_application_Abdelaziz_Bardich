@@ -9,4 +9,4 @@ session_destroy();
 setcookie("login_email","", time() - (86400 * 30), "/");
 setcookie("login_key","", time() - (86400 * 30), "/");
 // redirect to login.php
-header("location: login.php");
+header("location: ../../login.php");

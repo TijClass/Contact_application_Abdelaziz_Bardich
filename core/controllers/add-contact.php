@@ -9,7 +9,8 @@ if(isset($_POST)){
     $group = $_POST['group'];
     $note = $_POST['note'];
     
-    if(empty($fname) || empty($lname) || empty($email) || empty($phone) && empty($adress) || empty($group) || empty($note)){
+    if(empty($fname) || empty($lname) || empty($email) || empty($phone) || empty($adress) || empty($group)){
+        var_dump($_POST);
         echo 0;
     }else{
         try {

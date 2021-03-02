@@ -85,7 +85,7 @@ try {
                                             <td>'.$row['phone'].'</td>
                                             <td>'.$row['group'].'</td>
                                             <td>'.$row['notes'].'</td>
-                                            <td><a data-bs-toggle="modal" data-bs-target="#edit-contact" onclick="prepareModalforEdit('.$row['id'].')" class="btn btn-link edit-contact">Edit</a> <a onclick="deleteContact('.$row['id'].')"><i class="fa fa-times-circle text-danger"></i></a></td>
+                                            <td><a onclick="showEditModal('.$row['id'].')" class="btn btn-link edit-contact">Edit</a> <a onclick="deleteContact('.$row['id'].')"><i class="fa fa-times-circle text-danger"></i></a></td>
                                         </tr>
                                         ';
                                     }?>
@@ -97,64 +97,8 @@ try {
             </div>
         </section>
     </main>
-    <!-- Add contact modal -->
-    <div class="modal fade" id="add-person" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add person:</h5>
-              <button type="button" class="btn-close text-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form method="POST" action="./controllers/add-contact.php">
-                <div class="row">
-                    <div class="mb-3 col-6">
-                        <label for="first-name" class="col-form-label">First name:</label>
-                        <input requireed type="text" name="fname" class="form-control" id="first-name">
-                    </div>
-                    <div class="mb-3 col-6">
-                        <label for="last-name" class="col-form-label">Last name:</label>
-                        <input requireed type="text" name="lname" class="form-control" id="last-name">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mb-3 col-6">
-                        <label for="email-text" class="col-form-label">Email:</label>
-                        <input requireed type="email" name="email" class="form-control" id="email-txt">
-                    </div>
-                    <div class="mb-3 col-6">
-                        <label for="adress-text" class="col-form-label">Adress:</label>
-                        <input requireed type="text"  name="adress" class="form-control" id="adress-text">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mb-3 col-6">
-                        <label for="phone-text" class="col-form-label">Phone:</label>
-                        <input requireed type="text" name="phone" class="form-control" id="phone-txt">
-                    </div>
-                    <div class="mb-3 col-6">
-                        <label for="group-text" class="col-form-label d-block mb-1">Group:</label>
-                        <input requireed class="shadow" type="radio" name="group" id="family" value="family" > <label for="family">Family</label>
-                        <input requireed class="shadow" type="radio" name="group" id="friend" value="friend"> <label for="friend">Friend</label>
-                        <input requireed class="shadow" type="radio" name="group" id="business" value="business"> <label for="business">Business</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mb-3">
-                        <label for="note-text" class="col-form-label">Note:</label>
-                        <textarea requireed class="form-control" id="note-text" name="note"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mb-3 text-right">
-                        <button type="submit" class="btn btn-primary">Send message</button>
-                    </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+    <?php include "./add-modal.php"; ?>
+    <?php include "./edit-modal.php"; ?>
     <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="./assets/vendor/jquery/jquery.min.js"></script>
     <script src="./assets/js/function.js"></script>

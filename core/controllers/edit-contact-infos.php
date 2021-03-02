@@ -19,7 +19,9 @@ if(isset($_POST['id'])){
         $sql->bindParam(':group',$_POST['group'],PDO::PARAM_STR);
         $sql->bindParam(':notes',$_POST['note'],PDO::PARAM_STR);
         if($sql->execute()){
-            echo 1;
+            echo json_encode($_POST);
+        }else {
+            echo 0;
         }
     }catch(PDOException $e) {
         echo "<br>" . $e->getMessage();

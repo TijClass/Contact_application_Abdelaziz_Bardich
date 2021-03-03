@@ -107,6 +107,7 @@ try {
     <?php include "./edit-modal.php"; ?>
     <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/sweetalert/sweetalert.min.js"></script>
     <script src="./assets/js/function.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>

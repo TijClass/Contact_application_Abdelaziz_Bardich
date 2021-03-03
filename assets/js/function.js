@@ -1,20 +1,60 @@
 // delete contact
 function deleteContact(id){
-    $.post({
-        url:"./core/controllers/delete-contact.php",
-        data:{id:id},
-        success:function (res) {
-            if(res == 1){
-                $('tr[data-id="'+id+'"]').fadeOut(500);
-                setTimeout(() => {
-                    $('tr[data-id="'+id+'"]').remove(); 
-                }, 600);
-            }
-        },
-        error:function (err) {
-            console.error(err);
+    swal({
+        title: "Êtes-vous sûr?",
+        text: "Vous êtes sur le point de supprimer un contact de votre liste",
+        icon: "warning",
+        buttons: ["Annuler", "Supprimer"],
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+            $.post({
+                url:"./core/controllers/delete-contact.php",
+                data:{id:id},
+                success:function (res) {
+                    if(res == 1){
+                        $('tr[data-id="'+id+'"]').fadeOut(500);
+                        setTimeout(() => {
+                            $('tr[data-id="'+id+'"]').remove(); 
+                        }, 600);
+                        swal("Contact supprimé avec succès!", {icon: "success",});
+                    }
+                },
+                error:function (err) {
+                    console.error(err);
+                }
+            })
         }
-    })
+      });
+    // swal({
+    //     title: "Êtes-vous sûr?",
+    //     text: "Vous êtes sur le point de supprimer un contact de votre liste",
+    //     icon: "warning",
+    //     buttons: ["Annuler", "supprimer"],
+    //     // buttons: true,
+    //     dangerMode: true,
+    //   })
+    //   .then((willDelete) => {
+    //     if (willDelete) {
+    //         $.post({
+    //             url:"./core/controllers/delete-contact.php",
+    //             data:{id:id},
+    //             success:function (res) {
+    //                 if(res == 1){
+    //                     $('tr[data-id="'+id+'"]').fadeOut(500);
+    //                     setTimeout(() => {
+    //                         $('tr[data-id="'+id+'"]').remove(); 
+    //                     }, 600);
+    //                     swal("Contact supprimé avec succès!", {icon: "success",});
+    //                 }
+    //             },
+    //             error:function (err) {
+    //                 console.error(err);
+    //             }
+    //         })
+    //     }
+    //   });
 }
 // clear forms
 function clearForm() {

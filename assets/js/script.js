@@ -37,7 +37,7 @@ $(document).ready(function(){
                     <td>${data['group']}</td>
                     <td>${data['note']}</td>
                     <td>
-                        <a onclick="showEditModal(${data['id']})" class="btn btn-link">Edit</a>
+                        <a onclick="showEditModal(${data['id']})" class="btn btn-link">Modifier</a>
                         <a onclick="deleteContact(${data['id']})">
                             <i class="fa fa-times-circle text-danger"></i>
                         </a>
@@ -79,7 +79,7 @@ $(document).ready(function(){
                     <td>${data['group']}</td>
                     <td>${data['note']}</td>
                     <td>
-                        <a onclick="showEditModal(${data['id']})" class="btn btn-link">Edit</a>
+                        <a onclick="showEditModal(${data['id']})" class="btn btn-link">Modifier</a>
                         <a onclick="deleteContact(${data['id']})">
                             <i class="fa fa-times-circle text-danger"></i>
                         </a>

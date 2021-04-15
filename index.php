@@ -91,7 +91,7 @@ try {
                                             <td>'.$row['phone'].'</td>
                                             <td>'.$row['group'].'</td>
                                             <td>'.$row['notes'].'</td>
-                                            <td><a onclick="showEditModal('.$row['id'].')" class="btn btn-link edit-contact">Edit</a> <a onclick="deleteContact('.$row['id'].')"><i class="fa fa-times-circle text-danger"></i></a></td>
+                                            <td><a onclick="showEditModal('.$row['id'].')" class="btn btn-link edit-contact">Modifier</a> <a onclick="deleteContact('.$row['id'].')"><i class="fa fa-times-circle text-danger"></i></a></td>
                                         </tr>
                                         ';
                                     }?>

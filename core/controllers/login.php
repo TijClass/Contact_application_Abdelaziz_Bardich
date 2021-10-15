@@ -19,7 +19,7 @@ if(isset($_POST)){
                 $_SESSION["loggedin"] = 1;
                 // Set remember coockies
                 if(isset($_POST['rme'])){
-                    $key = password_hash($email,PASSWORD_DEFAULT);
+                    $key = password_hash("1234",PASSWORD_DEFAULT);
                     setcookie("login_email",$email, time() + (86400 * 30), "/"); // remember fo 3 month
                     setcookie("login_key",$key, time() + (86400 * 30), "/"); // remember fo 3 month
                 }
